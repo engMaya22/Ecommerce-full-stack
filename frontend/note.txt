@@ -1,0 +1,19 @@
+MainLayout
+   ↓
+   <Outlet />
+        ↓
+        ProfileLayout (when route is /profile)
+              ↓
+              <Outlet />
+                   ↓
+                   Account / Orders
+                   --
+Redux Persist =
+
+“Save Redux state into localStorage and restore it when page reloads”
+
+  // 12345678*
+
+npx prisma migrate dev --name init
+npx prisma migrate dev --name remove-category
+npx prisma generate after each migrate 

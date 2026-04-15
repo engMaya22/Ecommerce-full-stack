@@ -1,0 +1,120 @@
+{
+  "category": [
+    {
+      "id": 1,
+      "title": "men",
+      "prefix": "men",
+      "img": "https://cdn-eu.dynamicyield.com/api/9876644/images/cfb357649428__hp-w12-22032022-h_m-men.jpg"
+    },
+    {
+      "id": 2,
+      "title": "women",
+      "prefix": "women",
+      "img": "https://cdn-eu.dynamicyield.com/api/9876644/images/30d354267a09b__hp-w12-22032022-h_m-women_dresses.jpg"
+    },
+    {
+      "id": 3,
+      "title": "kids",
+      "prefix": "kids",
+      "img": "https://cdn-eu.dynamicyield.com/api/9876644/images/37d243d334c63__hp-w12-22032022-h_m-kids1.jpg"
+    },
+    {
+      "id": 4,
+      "title": "baby",
+      "prefix": "baby",
+      "img": "https://cdn-eu.dynamicyield.com/api/9876644/images/28948d47ae6e8__h_m-w39-28092022-4066c-1x1.jpg"
+    },
+    {
+      "id": 5,
+      "title": "sport",
+      "prefix": "sport",
+      "img": "https://cdn-eu.dynamicyield.com/api/9876644/images/1dda9ae79a671__h_m-w40-06102022-7416b-1x1.jpg"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "Jersey top",
+      "price": "249.00",
+      "cat_prefix": "men",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYJpDM-BB6pcBu2Qy56WDgPFXIszRC6Jp5xg&s",
+      "max": 4
+    },
+    {
+      "id": 2,
+      "title": "Regular Fit Jersey top",
+      "price": "229.00",
+      "cat_prefix": "men",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYJpDM-BB6pcBu2Qy56WDgPFXIszRC6Jp5xg&s",
+      "max": 4
+    },
+    {
+      "id": 3,
+      "title": "Cotton polo shirt",
+      "price": "200.00",
+      "cat_prefix": "men",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYJpDM-BB6pcBu2Qy56WDgPFXIszRC6Jp5xg&s",
+      "max": 3
+    },
+    {
+      "id": 4,
+      "title": "Cotton t-shirt",
+      "price": "100.00",
+      "cat_prefix": "women",
+      "img": "https://www.hummel.dk/dw/image/v2/BDWL_PRD/on/demandware.static/-/Sites-newline-master-catalog/default/dwd7489e16/images/model/500130-2162_B.png?sw=514&sh=685&q=80",
+      "max": 2
+    },
+    {
+      "id": 5,
+      "title": "Sweatshirt shorts",
+      "price": "300.00",
+      "cat_prefix": "women",
+      "img": "https://www.hummel.dk/dw/image/v2/BDWL_PRD/on/demandware.static/-/Sites-newline-master-catalog/default/dwd7489e16/images/model/500130-2162_B.png?sw=514&sh=685&q=80",
+      "max": 3
+    },
+    {
+      "id": 6,
+      "title": "Velour top",
+      "price": "300.00",
+      "cat_prefix": "kids",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_Vwcb5HqQ4YoU1pRJW9kpuZSff_5ubUT5mw&s"
+    },
+    {
+      "id": 9,
+      "title": "Pile all-in-one suit with ears",
+      "price": "500.00",
+      "cat_prefix": "baby",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOgcH_fWEAELYMTynigxpW-cAhXjH76ACS9A&s",
+      "max": 2
+    },
+    {
+      "id": 17,
+      "title": "Regular Fit football shirt",
+      "price": "449.00",
+      "cat_prefix": "sport",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjtSPAJL53Ef9Qr1ci06qTB9AmoNBK7xV28w&s",
+      "max": 2
+    }
+  ],
+  "users": [
+    {
+      "email": "eng.maya.esmaeel1@gmail.com",
+      "password": "$2a$10$viYmc6GrurqCdCuS5JRxGONJhtmJVqQSIxxR/LUdMrrW5jgr5KdfO",
+      "firstName": "Maya",
+      "lastName": "Ismaeel",
+      "id": 1
+    }
+  ],
+  "wishlist": [
+    {
+      "userId": 1,
+      "productId": 5,
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "productId": 4,
+      "id": 2
+    }
+  ]
+}

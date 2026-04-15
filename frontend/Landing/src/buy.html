@@ -1,0 +1,533 @@
+@@include("partials/main.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "Hously"})
+
+        <!-- Css -->
+        <link href="assets/libs/tobii/css/tobii.min.css" rel="stylesheet">
+        @@include("partials/head-css.html")
+    </head>
+    
+    @@include("partials/body.html")
+        @@include("partials/navbars/navbar-light.html")
+
+        <!-- Start Hero -->
+        <section class="relative table w-full py-32 lg:py-36 bg-[url('../../assets/images/bg/01.jpg')] bg-no-repeat bg-center bg-cover">
+            <div class="absolute inset-0 bg-slate-900 opacity-80"></div>
+            <div class="container relative">
+                <div class="grid grid-cols-1 text-center mt-10">
+                    <h3 class="md:text-4xl text-3xl md:leading-normal leading-normal font-medium text-white">Find Your Dream Home</h3>
+                </div><!--end grid-->
+            </div><!--end container-->
+        </section><!--end section-->
+        <div class="relative">
+            <div class="shape overflow-hidden z-1 text-white dark:text-slate-900">
+                <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+                </svg>
+            </div>
+        </div>
+
+        <div class="container relative -mt-[25px]">
+            <div class="grid grid-cols-1">
+                <div class="subcribe-form z-1">
+                    <form class="relative max-w-2xl mx-auto">
+                        <i data-feather="search" class="size-5 absolute top-[47%] -translate-y-1/2 start-4"></i>
+                        <input type="name" id="search_name" name="name" class="rounded-md bg-white dark:bg-slate-900 shadow-sm dark:shadow-gray-700 !ps-12" placeholder="City, Address, Zip :">
+                        <button type="submit" class="btn bg-green-600 hover:bg-green-700 text-white rounded-md">Search</button>
+                    </form><!--end form-->
+                </div>
+            </div><!--end grid-->
+        </div><!--end container-->
+        <!-- End Hero -->
+
+        <!-- Start -->
+        <section class="relative lg:py-24 py-16">
+            <div class="container relative">
+                <div class="grid grid-cols-1 pb-8 text-center">
+                    <h3 class="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">Featured Properties</h3>
+
+                    <p class="text-slate-400 max-w-xl mx-auto">A great plateform to buy, sell and rent your properties without any agent or commisions.</p>
+                </div><!--end grid-->
+
+                <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">
+                    <div class="group rounded-xl bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500">
+                        <div class="relative">
+                            <img src="assets/images/property/1.jpg" alt="">
+
+                            <div class="absolute top-4 end-4">
+                                <a href="javascript:void(0)" class="btn btn-icon bg-white dark:bg-slate-900 shadow-sm dark:shadow-gray-700 !rounded-full text-slate-100 dark:text-slate-700 focus:text-red-600 dark:focus:text-red-600 hover:text-red-600 dark:hover:text-red-600"><i class="mdi mdi-heart text-[20px]"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="p-6">
+                            <div class="pb-6">
+                                <a href="property-detail.html" class="text-lg hover:text-green-600 font-medium ease-in-out duration-500">10765 Hillshire Ave, Baton Rouge, LA 70810, USA</a>
+                            </div>
+
+                            <ul class="py-6 border-y border-slate-100 dark:border-gray-800 flex items-center list-none">
+                                <li class="flex items-center me-4">
+                                    <i class="uil uil-compress-arrows text-2xl me-2 text-green-600"></i>
+                                    <span>8000sqf</span>
+                                </li>
+
+                                <li class="flex items-center me-4">
+                                    <i class="uil uil-bed-double text-2xl me-2 text-green-600"></i>
+                                    <span>4 Beds</span>
+                                </li>
+
+                                <li class="flex items-center">
+                                    <i class="uil uil-bath text-2xl me-2 text-green-600"></i>
+                                    <span>4 Baths</span>
+                                </li>
+                            </ul>
+
+                            <ul class="pt-6 flex justify-between items-center list-none">
+                                <li>
+                                    <span class="text-slate-400">Price</span>
+                                    <p class="text-lg font-medium">$5000</p>
+                                </li>
+
+                                <li>
+                                    <span class="text-slate-400">Rating</span>
+                                    <ul class="text-lg font-medium text-amber-400 list-none">
+                                        <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        <li class="inline text-slate-900 dark:text-white">5.0(30)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!--end property content-->
+
+                    <div class="group rounded-xl bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500">
+                        <div class="relative">
+                            <img src="assets/images/property/2.jpg" alt="">
+
+                            <div class="absolute top-4 end-4">
+                                <a href="javascript:void(0)" class="btn btn-icon bg-white dark:bg-slate-900 shadow-sm dark:shadow-gray-700 !rounded-full text-slate-100 dark:text-slate-700 focus:text-red-600 dark:focus:text-red-600 hover:text-red-600 dark:hover:text-red-600"><i class="mdi mdi-heart text-[20px]"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="p-6">
+                            <div class="pb-6">
+                                <a href="property-detail.html" class="text-lg hover:text-green-600 font-medium ease-in-out duration-500">59345 STONEWALL DR, Plaquemine, LA 70764, USA</a>
+                            </div>
+
+                            <ul class="py-6 border-y border-slate-100 dark:border-gray-800 flex items-center list-none">
+                                <li class="flex items-center me-4">
+                                    <i class="uil uil-compress-arrows text-2xl me-2 text-green-600"></i>
+                                    <span>8000sqf</span>
+                                </li>
+
+                                <li class="flex items-center me-4">
+                                    <i class="uil uil-bed-double text-2xl me-2 text-green-600"></i>
+                                    <span>4 Beds</span>
+                                </li>
+
+                                <li class="flex items-center">
+                                    <i class="uil uil-bath text-2xl me-2 text-green-600"></i>
+                                    <span>4 Baths</span>
+                                </li>
+                            </ul>
+
+                            <ul class="pt-6 flex justify-between items-center list-none">
+                                <li>
+                                    <span class="text-slate-400">Price</span>
+                                    <p class="text-lg font-medium">$5000</p>
+                                </li>
+
+                                <li>
+                                    <span class="text-slate-400">Rating</span>
+                                    <ul class="text-lg font-medium text-amber-400 list-none">
+                                        <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        <li class="inline text-slate-900 dark:text-white">5.0(30)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!--end property content-->
+
+                    <div class="group rounded-xl bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500">
+                        <div class="relative">
+                            <img src="assets/images/property/3.jpg" alt="">
+
+                            <div class="absolute top-4 end-4">
+                                <a href="javascript:void(0)" class="btn btn-icon bg-white dark:bg-slate-900 shadow-sm dark:shadow-gray-700 !rounded-full text-slate-100 dark:text-slate-700 focus:text-red-600 dark:focus:text-red-600 hover:text-red-600 dark:hover:text-red-600"><i class="mdi mdi-heart text-[20px]"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="p-6">
+                            <div class="pb-6">
+                                <a href="property-detail.html" class="text-lg hover:text-green-600 font-medium ease-in-out duration-500">3723 SANDBAR DR, Addis, LA 70710, USA</a>
+                            </div>
+
+                            <ul class="py-6 border-y border-slate-100 dark:border-gray-800 flex items-center list-none">
+                                <li class="flex items-center me-4">
+                                    <i class="uil uil-compress-arrows text-2xl me-2 text-green-600"></i>
+                                    <span>8000sqf</span>
+                                </li>
+
+                                <li class="flex items-center me-4">
+                                    <i class="uil uil-bed-double text-2xl me-2 text-green-600"></i>
+                                    <span>4 Beds</span>
+                                </li>
+
+                                <li class="flex items-center">
+                                    <i class="uil uil-bath text-2xl me-2 text-green-600"></i>
+                                    <span>4 Baths</span>
+                                </li>
+                            </ul>
+
+                            <ul class="pt-6 flex justify-between items-center list-none">
+                                <li>
+                                    <span class="text-slate-400">Price</span>
+                                    <p class="text-lg font-medium">$5000</p>
+                                </li>
+
+                                <li>
+                                    <span class="text-slate-400">Rating</span>
+                                    <ul class="text-lg font-medium text-amber-400 list-none">
+                                        <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        <li class="inline text-slate-900 dark:text-white">5.0(30)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!--end property content-->
+
+                    <div class="group rounded-xl bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500">
+                        <div class="relative">
+                            <img src="assets/images/property/4.jpg" alt="">
+
+                            <div class="absolute top-4 end-4">
+                                <a href="javascript:void(0)" class="btn btn-icon bg-white dark:bg-slate-900 shadow-sm dark:shadow-gray-700 !rounded-full text-slate-100 dark:text-slate-700 focus:text-red-600 dark:focus:text-red-600 hover:text-red-600 dark:hover:text-red-600"><i class="mdi mdi-heart text-[20px]"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="p-6">
+                            <div class="pb-6">
+                                <a href="property-detail.html" class="text-lg hover:text-green-600 font-medium ease-in-out duration-500">Lot 21 ROYAL OAK DR, Prairieville, LA 70769, USA</a>
+                            </div>
+
+                            <ul class="py-6 border-y border-slate-100 dark:border-gray-800 flex items-center list-none">
+                                <li class="flex items-center me-4">
+                                    <i class="uil uil-compress-arrows text-2xl me-2 text-green-600"></i>
+                                    <span>8000sqf</span>
+                                </li>
+
+                                <li class="flex items-center me-4">
+                                    <i class="uil uil-bed-double text-2xl me-2 text-green-600"></i>
+                                    <span>4 Beds</span>
+                                </li>
+
+                                <li class="flex items-center">
+                                    <i class="uil uil-bath text-2xl me-2 text-green-600"></i>
+                                    <span>4 Baths</span>
+                                </li>
+                            </ul>
+
+                            <ul class="pt-6 flex justify-between items-center list-none">
+                                <li>
+                                    <span class="text-slate-400">Price</span>
+                                    <p class="text-lg font-medium">$5000</p>
+                                </li>
+
+                                <li>
+                                    <span class="text-slate-400">Rating</span>
+                                    <ul class="text-lg font-medium text-amber-400 list-none">
+                                        <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        <li class="inline text-slate-900 dark:text-white">5.0(30)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!--end property content-->
+
+                    <div class="group rounded-xl bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500">
+                        <div class="relative">
+                            <img src="assets/images/property/5.jpg" alt="">
+
+                            <div class="absolute top-4 end-4">
+                                <a href="javascript:void(0)" class="btn btn-icon bg-white dark:bg-slate-900 shadow-sm dark:shadow-gray-700 !rounded-full text-slate-100 dark:text-slate-700 focus:text-red-600 dark:focus:text-red-600 hover:text-red-600 dark:hover:text-red-600"><i class="mdi mdi-heart text-[20px]"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="p-6">
+                            <div class="pb-6">
+                                <a href="property-detail.html" class="text-lg hover:text-green-600 font-medium ease-in-out duration-500">710 BOYD DR, Unit #1102, Baton Rouge, LA 70808, USA</a>
+                            </div>
+
+                            <ul class="py-6 border-y border-slate-100 dark:border-gray-800 flex items-center list-none">
+                                <li class="flex items-center me-4">
+                                    <i class="uil uil-compress-arrows text-2xl me-2 text-green-600"></i>
+                                    <span>8000sqf</span>
+                                </li>
+
+                                <li class="flex items-center me-4">
+                                    <i class="uil uil-bed-double text-2xl me-2 text-green-600"></i>
+                                    <span>4 Beds</span>
+                                </li>
+
+                                <li class="flex items-center">
+                                    <i class="uil uil-bath text-2xl me-2 text-green-600"></i>
+                                    <span>4 Baths</span>
+                                </li>
+                            </ul>
+
+                            <ul class="pt-6 flex justify-between items-center list-none">
+                                <li>
+                                    <span class="text-slate-400">Price</span>
+                                    <p class="text-lg font-medium">$5000</p>
+                                </li>
+
+                                <li>
+                                    <span class="text-slate-400">Rating</span>
+                                    <ul class="text-lg font-medium text-amber-400 list-none">
+                                        <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        <li class="inline text-slate-900 dark:text-white">5.0(30)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!--end property content-->
+
+                    <div class="group rounded-xl bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700 overflow-hidden ease-in-out duration-500">
+                        <div class="relative">
+                            <img src="assets/images/property/6.jpg" alt="">
+
+                            <div class="absolute top-4 end-4">
+                                <a href="javascript:void(0)" class="btn btn-icon bg-white dark:bg-slate-900 shadow-sm dark:shadow-gray-700 !rounded-full text-slate-100 dark:text-slate-700 focus:text-red-600 dark:focus:text-red-600 hover:text-red-600 dark:hover:text-red-600"><i class="mdi mdi-heart text-[20px]"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="p-6">
+                            <div class="pb-6">
+                                <a href="property-detail.html" class="text-lg hover:text-green-600 font-medium ease-in-out duration-500">5133 MCLAIN WAY, Baton Rouge, LA 70809, USA</a>
+                            </div>
+
+                            <ul class="py-6 border-y border-slate-100 dark:border-gray-800 flex items-center list-none">
+                                <li class="flex items-center me-4">
+                                    <i class="uil uil-compress-arrows text-2xl me-2 text-green-600"></i>
+                                    <span>8000sqf</span>
+                                </li>
+
+                                <li class="flex items-center me-4">
+                                    <i class="uil uil-bed-double text-2xl me-2 text-green-600"></i>
+                                    <span>4 Beds</span>
+                                </li>
+
+                                <li class="flex items-center">
+                                    <i class="uil uil-bath text-2xl me-2 text-green-600"></i>
+                                    <span>4 Baths</span>
+                                </li>
+                            </ul>
+
+                            <ul class="pt-6 flex justify-between items-center list-none">
+                                <li>
+                                    <span class="text-slate-400">Price</span>
+                                    <p class="text-lg font-medium">$5000</p>
+                                </li>
+
+                                <li>
+                                    <span class="text-slate-400">Rating</span>
+                                    <ul class="text-lg font-medium text-amber-400 list-none">
+                                        <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        <li class="inline text-slate-900 dark:text-white">5.0(30)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!--end property content-->
+                </div><!--en grid-->
+
+                <div class="md:flex justify-center text-center mt-6">
+                    <div class="md:w-full">
+                        <a href="grid.html" class="btn btn-link text-green-600 hover:text-green-600 after:bg-green-600 transition duration-500">View More Properties <i class="uil uil-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+            </div><!--end container-->
+
+            <div class="container relative lg:mt-24 mt-16">
+                <div class="grid grid-cols-1 pb-8 text-center">
+                    <h3 class="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">Buyer Benefits</h3>
+
+                    <p class="text-slate-400 max-w-xl mx-auto">A great plateform to buy, sell and rent your properties without any agent or commisions.</p>
+                </div><!--end grid-->
+
+                <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">
+                    <!-- Content -->
+                    <div class="group relative lg:px-10 transition-all duration-500 ease-in-out rounded-xl bg-transparent overflow-hidden text-center">
+                        <div class="relative overflow-hidden text-transparent -m-3">
+                            <i data-feather="hexagon" class="size-32 fill-green-600/5 mx-auto"></i>
+                            <div class="absolute top-2/4 -translate-y-2/4 start-0 end-0 mx-auto text-green-600 rounded-xl transition-all duration-500 ease-in-out text-4xl flex align-middle justify-center items-center">
+                                <i class="uil uil-estate"></i>
+                            </div>
+                        </div>
+
+                        <div class="mt-6">
+                            <h5 class="text-xl font-medium">Free Consultation</h5>
+                            <p class="text-slate-400 mt-3">If the distribution of letters and 'words' is random, the reader will not be distracted from making.</p>
+                        </div>
+                    </div>
+                    <!-- Content -->
+
+                    <!-- Content -->
+                    <div class="group relative lg:px-10 transition-all duration-500 ease-in-out rounded-xl bg-transparent overflow-hidden text-center">
+                        <div class="relative overflow-hidden text-transparent -m-3">
+                            <i data-feather="hexagon" class="size-32 fill-green-600/5 mx-auto"></i>
+                            <div class="absolute top-2/4 -translate-y-2/4 start-0 end-0 mx-auto text-green-600 rounded-xl transition-all duration-500 ease-in-out text-4xl flex align-middle justify-center items-center">
+                                <i class="uil uil-bag"></i>
+                            </div>
+                        </div>
+
+                        <div class="mt-6">
+                            <h5 class="text-xl font-medium">Buyer Rebate Programs</h5>
+                            <p class="text-slate-400 mt-3">If the distribution of letters and 'words' is random, the reader will not be distracted from making.</p>
+                        </div>
+                    </div>
+                    <!-- Content -->
+
+                    <!-- Content -->
+                    <div class="group relative lg:px-10 transition-all duration-500 ease-in-out rounded-xl bg-transparent overflow-hidden text-center">
+                        <div class="relative overflow-hidden text-transparent -m-3">
+                            <i data-feather="hexagon" class="size-32 fill-green-600/5 mx-auto"></i>
+                            <div class="absolute top-2/4 -translate-y-2/4 start-0 end-0 mx-auto text-green-600 rounded-xl transition-all duration-500 ease-in-out text-4xl flex align-middle justify-center items-center">
+                                <i class="uil uil-key-skeleton"></i>
+                            </div>
+                        </div>
+
+                        <div class="mt-6">
+                            <h5 class="text-xl font-medium">Save Money</h5>
+                            <p class="text-slate-400 mt-3">If the distribution of letters and 'words' is random, the reader will not be distracted from making.</p>
+                        </div>
+                    </div>
+                    <!-- Content -->
+                </div><!--end grid-->
+            </div><!--end container-->
+
+            <div class="container relative lg:mt-24 mt-16">
+                <div class="grid md:grid-cols-12 grid-cols-1 gap-[30px]">
+                    <div class="lg:col-span-4 md:col-span-5">
+                        <div class="sticky top-20">
+                            <ul class="flex-column text-center p-6 bg-white dark:bg-slate-900 shadow-sm dark:shadow-gray-700 rounded-md" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+                                <li role="presentation">
+                                    <button class="px-4 py-2 text-base font-medium rounded-md w-full text-white hover:text-green-600 transition-all duration-500 ease-in-out" id="letter-tab" data-tabs-target="#letter" type="button" role="tab" aria-controls="letter" aria-selected="true">Pre Approval Letter</button>
+                                </li>
+                                <li role="presentation">
+                                    <button class="px-4 py-2 text-base font-medium rounded-md w-full text-white mt-3 transition-all duration-500 ease-in-out" id="schedule-tab" data-tabs-target="#schedule" type="button" role="tab" aria-controls="schedule" aria-selected="false">Schedule a Showing</button>
+                                </li>
+                                <li role="presentation">
+                                    <button class="px-4 py-2 text-base font-medium rounded-md w-full text-white mt-3 transition-all duration-500 ease-in-out" id="offer-tab" data-tabs-target="#offer" type="button" role="tab" aria-controls="offer" aria-selected="false">Submit an Offer</button>
+                                </li>
+                                <li role="presentation">
+                                    <button class="px-4 py-2 text-base font-medium rounded-md w-full text-white mt-3 transition-all duration-500 ease-in-out" id="inspection-tab" data-tabs-target="#inspection" type="button" role="tab" aria-controls="inspection" aria-selected="false">Property Inspection</button>
+                                </li>
+                                <li role="presentation">
+                                    <button class="px-4 py-2 text-base font-medium rounded-md w-full text-white mt-3 transition-all duration-500 ease-in-out" id="appraisal-tab" data-tabs-target="#appraisal" type="button" role="tab" aria-controls="appraisal" aria-selected="false">Appraisal</button>
+                                </li>
+                                <li role="presentation">
+                                    <button class="px-4 py-2 text-base font-medium rounded-md w-full text-white mt-3 transition-all duration-500 ease-in-out" id="closing-tab" data-tabs-target="#closing" type="button" role="tab" aria-controls="closing" aria-selected="false">Closing Deal</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-8 md:col-span-7">
+                        <div id="myTabContent">
+                            <div class="" id="letter" role="tabpanel" aria-labelledby="letter-tab">
+                                <img src="assets/images/svg/Agent_Monochromatic.svg" alt="">
+                                <div class="mt-6">
+                                    <h5 class="font-medium text-xl">Pre Approval Letter</h5>
+                                    <p class="text-slate-400 mt-3">Most buyers think the first step is finding their dream house, but the truth is finding the funding is the first step. Hously streamlines the Loan Pre-Approval process with our ecosystem of Premier Partners or simply upload your own Pre-Approval letter.</p>
+                                </div>
+                            </div>
+                            <div class="hidden " id="schedule" role="tabpanel" aria-labelledby="schedule-tab">
+                                <img src="assets/images/svg/presentation_Flatline.svg" alt="">
+                                <div class="mt-6">
+                                    <h5 class="font-medium text-xl">Schedule a Showing</h5>
+                                    <p class="text-slate-400 mt-3">Hously allows a buyer to schedule an instant showing and gain a private viewing without the need for multiple parties to be involved. You pick the time that works for you!</p>
+                                </div>
+                            </div>
+                            <div class="hidden " id="offer" role="tabpanel" aria-labelledby="offer-tab">
+                                <img src="assets/images/svg/session_Flatline.svg" alt="">
+                                <div class="mt-6">
+                                    <h5 class="font-medium text-xl">Submit an Offer</h5>
+                                    <p class="text-slate-400 mt-3">Hously walks a buyer through the purchase agreement process making the paperwork appear effortless. With our custom workflows and progress analytics, you will always know where your purchase stands. No more phone tag and unreturned emails!</p>
+                                </div>
+                            </div>
+                            <div class="hidden " id="inspection" role="tabpanel" aria-labelledby="inspection-tab">
+                                <img src="assets/images/svg/Startup_Flatline.svg" alt="">
+                                <div class="mt-6">
+                                    <h5 class="font-medium text-xl">Property Inspection</h5>
+                                    <p class="text-slate-400 mt-3">No one wants to buy a lemon. Book an inspection with a licensed inspector, then submit the repair requests all via the Hously platform.</p>
+                                </div>
+                            </div>
+                            <div class="hidden " id="appraisal" role="tabpanel" aria-labelledby="appraisal-tab">
+                                <img src="assets/images/svg/team_Flatline.svg" alt="">
+                                <div class="mt-6">
+                                    <h5 class="font-medium text-xl">Appraisal</h5>
+                                    <p class="text-slate-400 mt-3">Hously monitors the appraisal process ensuring the home you are purchasing meets or exceeds the price you are paying.</p>
+                                </div>
+                            </div>
+                            <div class="hidden " id="closing" role="tabpanel" aria-labelledby="closing-tab">
+                                <img src="assets/images/svg/Team_meeting_Two.svg" alt="">
+                                <div class="mt-6">
+                                    <h5 class="font-medium text-xl">Closing Deal</h5>
+                                    <p class="text-slate-400 mt-3">Finally the closing packet is sent to the Title office, and the day has come… You have Hously the home of your dreams!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--end grid-->
+            </div><!--end container-->
+
+            <div class="container relative lg:mt-24 mt-16">
+                <div class="grid grid-cols-1 text-center">
+                    <h3 class="mb-6 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">Have Question ? Get in touch!</h3>
+
+                    <p class="text-slate-400 max-w-xl mx-auto">A great plateform to buy, sell and rent your properties without any agent or commisions.</p>
+                
+                    <div class="mt-6">
+                        <a href="contact.html" class="btn bg-green-600 hover:bg-green-700 text-white rounded-md"><i class="uil uil-phone align-middle me-2"></i> Contact us</a>
+                    </div>
+                </div><!--end grid-->
+            </div><!--end container-->
+        </section><!--end section-->
+        <!-- End -->
+
+        @@include("partials/footer/footer.html")
+        @@include("partials/switcher.html")
+
+        <!-- Back to top -->
+        <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top fixed hidden text-lg rounded-full z-10 bottom-5 end-5 size-9 text-center bg-green-600 text-white justify-center items-center"><i class="uil uil-arrow-up"></i></a>
+        <!-- Back to top -->
+
+        <!-- JAVASCRIPTS -->
+        <script src="assets/libs/tobii/js/tobii.min.js"></script>
+        @@include("partials/script-files.html")
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>

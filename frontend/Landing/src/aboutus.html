@@ -1,0 +1,405 @@
+@@include("partials/main.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "Hously"})
+
+        <!-- Css -->
+        <link href="assets/libs/tiny-slider/tiny-slider.css" rel="stylesheet">
+        <link href="assets/libs/tobii/css/tobii.min.css" rel="stylesheet">
+        @@include("partials/head-css.html")
+    </head>
+    
+    @@include("partials/body.html")
+        @@include("partials/navbars/navbar-light.html")
+
+        <!-- Start Hero -->
+        <section class="relative table w-full py-32 lg:py-36 bg-[url('../../assets/images/bg/01.jpg')] bg-no-repeat bg-center bg-cover">
+            <div class="absolute inset-0 bg-slate-900 opacity-80"></div>
+            <div class="container relative">
+                <div class="grid grid-cols-1 text-center mt-10">
+                    <h3 class="md:text-4xl text-3xl md:leading-normal leading-normal font-medium text-white">About Us</h3>
+                </div><!--end grid-->
+            </div><!--end container-->
+        </section><!--end section-->
+        <div class="relative">
+            <div class="shape overflow-hidden z-1 text-white dark:text-slate-900">
+                <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+                </svg>
+            </div>
+        </div>
+        <!-- End Hero -->
+
+        <!-- Start -->
+        <section class="relative lg:py-24 py-16">
+            <div class="container relative">
+                <div class="grid md:grid-cols-12 grid-cols-1 items-center gap-[30px]">
+                    <div class="md:col-span-5">
+                        <div class="relative">
+                            <img src="assets/images/about.jpg" class="rounded-xl shadow-md" alt="">
+                            <div class="absolute bottom-2/4 translate-y-2/4 start-0 end-0 text-center">
+                                <a href="#!" data-type="youtube" data-id="yba7hPeTSjk"
+                                    class="lightbox size-20 rounded-full shadow-md dark:shadow-gray-700 inline-flex items-center justify-center bg-white dark:bg-slate-900 text-green-600">
+                                    <i class="mdi mdi-play inline-flex items-center justify-center text-2xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+
+                    <div class="md:col-span-7">
+                        <div class="lg:ms-4">
+                            <h4 class="mb-6 md:text-3xl text-2xl lg:leading-normal leading-normal font-semibold">Efficiency. Transparency. <br> Control.</h4>
+                            <p class="text-slate-400 max-w-xl">Hously developed a platform for the Real Estate marketplace that allows buyers and sellers to easily execute a transaction on their own. The platform drives efficiency, cost transparency and control into the hands of the consumers. Hously is Real Estate Redefined.</p>
+                            
+                            <div class="mt-4">
+                                <a href="" class="btn bg-green-600 hover:bg-green-700 text-white rounded-md mt-3">Learn More </a>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end grid-->
+            </div><!--end container-->
+
+            <div class="container relative lg:mt-24 mt-16">
+                <div class="grid grid-cols-1 pb-8 text-center">
+                    <h3 class="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">How It Works</h3>
+
+                    <p class="text-slate-400 max-w-xl mx-auto">A great plateform to buy, sell and rent your properties without any agent or commisions.</p>
+                </div><!--end grid-->
+
+                <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">
+                    <!-- Content -->
+                    <div class="group relative lg:px-10 transition-all duration-500 ease-in-out rounded-xl bg-transparent overflow-hidden text-center">
+                        <div class="relative overflow-hidden text-transparent -m-3">
+                            <i data-feather="hexagon" class="size-32 fill-green-600/5 mx-auto"></i>
+                            <div class="absolute top-2/4 -translate-y-2/4 start-0 end-0 mx-auto text-green-600 rounded-xl transition-all duration-500 ease-in-out text-4xl flex align-middle justify-center items-center">
+                                <i class="uil uil-estate"></i>
+                            </div>
+                        </div>
+
+                        <div class="mt-6">
+                            <h5 class="text-xl font-medium">Evaluate Property</h5>
+                            <p class="text-slate-400 mt-3">If the distribution of letters and 'words' is random, the reader will not be distracted from making.</p>
+                        </div>
+                    </div>
+                    <!-- Content -->
+
+                    <!-- Content -->
+                    <div class="group relative lg:px-10 transition-all duration-500 ease-in-out rounded-xl bg-transparent overflow-hidden text-center">
+                        <div class="relative overflow-hidden text-transparent -m-3">
+                            <i data-feather="hexagon" class="size-32 fill-green-600/5 mx-auto"></i>
+                            <div class="absolute top-2/4 -translate-y-2/4 start-0 end-0 mx-auto text-green-600 rounded-xl transition-all duration-500 ease-in-out text-4xl flex align-middle justify-center items-center">
+                                <i class="uil uil-bag"></i>
+                            </div>
+                        </div>
+
+                        <div class="mt-6">
+                            <h5 class="text-xl font-medium">Meeting with Agent</h5>
+                            <p class="text-slate-400 mt-3">If the distribution of letters and 'words' is random, the reader will not be distracted from making.</p>
+                        </div>
+                    </div>
+                    <!-- Content -->
+
+                    <!-- Content -->
+                    <div class="group relative lg:px-10 transition-all duration-500 ease-in-out rounded-xl bg-transparent overflow-hidden text-center">
+                        <div class="relative overflow-hidden text-transparent -m-3">
+                            <i data-feather="hexagon" class="size-32 fill-green-600/5 mx-auto"></i>
+                            <div class="absolute top-2/4 -translate-y-2/4 start-0 end-0 mx-auto text-green-600 rounded-xl transition-all duration-500 ease-in-out text-4xl flex align-middle justify-center items-center">
+                                <i class="uil uil-key-skeleton"></i>
+                            </div>
+                        </div>
+
+                        <div class="mt-6">
+                            <h5 class="text-xl font-medium">Close the Deal</h5>
+                            <p class="text-slate-400 mt-3">If the distribution of letters and 'words' is random, the reader will not be distracted from making.</p>
+                        </div>
+                    </div>
+                    <!-- Content -->
+                </div><!--end grid-->
+            </div><!--end container-->
+        </section><!--end section-->
+        <!-- End -->
+
+        <!-- Start CTA -->
+        <section class="relative py-24 bg-[url('../../assets/images/bg/01.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
+            <div class="absolute inset-0 bg-black/60"></div>
+            <div class="container relative">
+                <div class="grid lg:grid-cols-12 grid-cols-1 md:text-start text-center justify-center">
+                    <div class="lg:col-start-2 lg:col-span-10">
+                        <div class="grid md:grid-cols-3 grid-cols-1 items-center">
+                            
+                            <div class="counter-box text-center">
+                                <h1 class="text-white lg:text-5xl text-4xl font-semibold mb-2"><span class="counter-value" data-target="1548">1010</span>+</h1>
+                                <h5 class="counter-head text-white text-lg font-medium">Properties Sell</h5>
+                            </div><!--end counter box-->
+        
+                            
+                            <div class="counter-box text-center">
+                                <h1 class="text-white lg:text-5xl text-4xl font-semibold mb-2"><span class="counter-value" data-target="25">2</span>+</h1>
+                                <h5 class="counter-head text-white text-lg font-medium">Award Gained</h5>
+                            </div><!--end counter box-->
+        
+                            
+                            <div class="counter-box text-center">
+                                <h1 class="text-white lg:text-5xl text-4xl font-semibold mb-2"><span class="counter-value" data-target="9">0</span>+</h1>
+                                <h5 class="counter-head text-white text-lg font-medium">Years Experience</h5>
+                            </div><!--end counter box-->
+                        </div>
+                    </div>
+                </div><!--end grid-->
+            </div><!--end container-->
+        </section><!--end section-->
+        <!-- End CTA -->
+
+        <!-- Start -->
+        <section class="relative lg:py-24 py-16">
+            <div class="container relative">
+                <div class="grid grid-cols-1 pb-8 text-center">
+                    <h3 class="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">Meet The Agent Team</h3>
+
+                    <p class="text-slate-400 max-w-xl mx-auto">A great plateform to buy, sell and rent your properties without any agent or commisions.</p>
+                </div><!--end grid-->
+
+                <div class="grid md:grid-cols-12 grid-cols-1 mt-8 gap-[30px]">
+                    <div class="lg:col-span-3 md:col-span-6">
+                        <div class="group text-center">
+                            <div class="relative inline-block mx-auto size-52 rounded-full overflow-hidden">
+                                <img src="assets/images/client/04.jpg" class="" alt="">
+                                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-slate-900 size-52 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"></div>
+
+                                <ul class="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 transition-all duration-500 ease-in-out">
+                                    <li class="inline"><a href="" class="btn btn-icon btn-sm !rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"><i data-feather="facebook" class="size-4"></i></a></li>
+                                    <li class="inline"><a href="" class="btn btn-icon btn-sm !rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"><i data-feather="instagram" class="size-4"></i></a></li>
+                                    <li class="inline"><a href="" class="btn btn-icon btn-sm !rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"><i data-feather="linkedin" class="size-4"></i></a></li>
+                                </ul><!--end icon-->
+                            </div>
+
+                            <div class="content mt-3">
+                                <a href="agent-profile.html" class="text-xl font-medium hover:text-green-600 transition-all duration-500 ease-in-out">Jack John</a>
+                                <p class="text-slate-400">Property Broker</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:col-span-3 md:col-span-6">
+                        <div class="group text-center">
+                            <div class="relative inline-block mx-auto size-52 rounded-full overflow-hidden">
+                                <img src="assets/images/client/05.jpg" class="" alt="">
+                                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-slate-900 size-52 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"></div>
+
+                                <ul class="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 transition-all duration-500 ease-in-out">
+                                    <li class="inline"><a href="" class="btn btn-icon btn-sm !rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"><i data-feather="facebook" class="size-4"></i></a></li>
+                                    <li class="inline"><a href="" class="btn btn-icon btn-sm !rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"><i data-feather="instagram" class="size-4"></i></a></li>
+                                    <li class="inline"><a href="" class="btn btn-icon btn-sm !rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"><i data-feather="linkedin" class="size-4"></i></a></li>
+                                </ul><!--end icon-->
+                            </div>
+
+                            <div class="content mt-3">
+                                <a href="agent-profile.html" class="text-xl font-medium hover:text-green-600 transition-all duration-500 ease-in-out">Krista John</a>
+                                <p class="text-slate-400">Property Broker</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:col-span-3 md:col-span-6">
+                        <div class="group text-center">
+                            <div class="relative inline-block mx-auto size-52 rounded-full overflow-hidden">
+                                <img src="assets/images/client/06.jpg" class="" alt="">
+                                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-slate-900 size-52 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"></div>
+
+                                <ul class="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 transition-all duration-500 ease-in-out">
+                                    <li class="inline"><a href="" class="btn btn-icon btn-sm !rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"><i data-feather="facebook" class="size-4"></i></a></li>
+                                    <li class="inline"><a href="" class="btn btn-icon btn-sm !rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"><i data-feather="instagram" class="size-4"></i></a></li>
+                                    <li class="inline"><a href="" class="btn btn-icon btn-sm !rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"><i data-feather="linkedin" class="size-4"></i></a></li>
+                                </ul><!--end icon-->
+                            </div>
+
+                            <div class="content mt-3">
+                                <a href="agent-profile.html" class="text-xl font-medium hover:text-green-600 transition-all duration-500 ease-in-out">Roger Jackson</a>
+                                <p class="text-slate-400">Property Broker</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:col-span-3 md:col-span-6">
+                        <div class="group text-center">
+                            <div class="relative inline-block mx-auto size-52 rounded-full overflow-hidden">
+                                <img src="assets/images/client/07.jpg" class="" alt="">
+                                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-slate-900 size-52 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"></div>
+
+                                <ul class="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 transition-all duration-500 ease-in-out">
+                                    <li class="inline"><a href="" class="btn btn-icon btn-sm !rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"><i data-feather="facebook" class="size-4"></i></a></li>
+                                    <li class="inline"><a href="" class="btn btn-icon btn-sm !rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"><i data-feather="instagram" class="size-4"></i></a></li>
+                                    <li class="inline"><a href="" class="btn btn-icon btn-sm !rounded-full border border-green-600 bg-green-600 hover:border-green-600 hover:bg-green-600 text-white"><i data-feather="linkedin" class="size-4"></i></a></li>
+                                </ul><!--end icon-->
+                            </div>
+
+                            <div class="content mt-3">
+                                <a href="agent-profile.html" class="text-xl font-medium hover:text-green-600 transition-all duration-500 ease-in-out">Johnny English</a>
+                                <p class="text-slate-400">Property Broker</p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--end grid-->
+            </div><!--end container-->
+
+            <div class="container relative lg:mt-24 mt-16">
+                <div class="grid grid-cols-1 pb-8 text-center">
+                    <h3 class="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">What Our Client Say ?</h3>
+
+                    <p class="text-slate-400 max-w-xl mx-auto">A great plateform to buy, sell and rent your properties without any agent or commisions.</p>
+                </div><!--end grid-->
+
+                <div class="flex justify-center relative mt-8">
+                    <div class="relative w-full">
+                        <div class="tiny-three-item">
+                            <div class="tiny-slide">
+                                <div class="text-center mx-3">
+                                    <p class="text-lg text-slate-400 italic"> " Hously made the processes so easy. Hously instantly increased the amount of interest and ultimately saved us over $10,000. " </p>
+
+                                    <div class="text-center mt-5">
+                                        <ul class="text-xl font-medium text-amber-400 list-none mb-2">
+                                            <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        </ul>
+
+                                        <img src="assets/images/client/01.jpg" class="size-14 rounded-full shadow-md dark:shadow-gray-700 mx-auto" alt="">
+                                        <h6 class="mt-2 fw-semibold">Christa Smith</h6>
+                                        <span class="text-slate-400 text-sm">Manager</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tiny-slide">
+                                <div class="text-center mx-3">
+                                    <p class="text-lg text-slate-400 italic"> " I highly recommend Hously as the new way to sell your home "by owner". My home sold in 24 hours for the asking price. Best $400 you could spend to sell your home. " </p>
+
+                                    <div class="text-center mt-5">
+                                        <ul class="text-xl font-medium text-amber-400 list-none mb-2">
+                                            <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        </ul>
+
+                                        <img src="assets/images/client/02.jpg" class="size-14 rounded-full shadow-md dark:shadow-gray-700 mx-auto" alt="">
+                                        <h6 class="mt-2 fw-semibold">Christa Smith</h6>
+                                        <span class="text-slate-400 text-sm">Manager</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tiny-slide">
+                                <div class="text-center mx-3">
+                                    <p class="text-lg text-slate-400 italic"> " My favorite part about selling my home myself was that we got to meet and get to know the people personally. This made it so much more enjoyable! " </p>
+
+                                    <div class="text-center mt-5">
+                                        <ul class="text-xl font-medium text-amber-400 list-none mb-2">
+                                            <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        </ul>
+
+                                        <img src="assets/images/client/03.jpg" class="size-14 rounded-full shadow-md dark:shadow-gray-700 mx-auto" alt="">
+                                        <h6 class="mt-2 fw-semibold">Christa Smith</h6>
+                                        <span class="text-slate-400 text-sm">Manager</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tiny-slide">
+                                <div class="text-center mx-3">
+                                    <p class="text-lg text-slate-400 italic"> " Great experience all around! Easy to use and efficient. " </p>
+
+                                    <div class="text-center mt-5">
+                                        <ul class="text-xl font-medium text-amber-400 list-none mb-2">
+                                            <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        </ul>
+
+                                        <img src="assets/images/client/04.jpg" class="size-14 rounded-full shadow-md dark:shadow-gray-700 mx-auto" alt="">
+                                        <h6 class="mt-2 fw-semibold">Christa Smith</h6>
+                                        <span class="text-slate-400 text-sm">Manager</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tiny-slide">
+                                <div class="text-center mx-3">
+                                    <p class="text-lg text-slate-400 italic"> " Hously made selling my home easy and stress free. They went above and beyond what is expected. " </p>
+
+                                    <div class="text-center mt-5">
+                                        <ul class="text-xl font-medium text-amber-400 list-none mb-2">
+                                            <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        </ul>
+
+                                        <img src="assets/images/client/05.jpg" class="size-14 rounded-full shadow-md dark:shadow-gray-700 mx-auto" alt="">
+                                        <h6 class="mt-2 fw-semibold">Christa Smith</h6>
+                                        <span class="text-slate-400 text-sm">Manager</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tiny-slide">
+                                <div class="text-center mx-3">
+                                    <p class="text-lg text-slate-400 italic"> " Hously is fair priced, quick to respond, and easy to use. I highly recommend their services! " </p>
+
+                                    <div class="text-center mt-5">
+                                        <ul class="text-xl font-medium text-amber-400 list-none mb-2">
+                                            <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            <li class="inline"><i class="mdi mdi-star"></i></li>
+                                        </ul>
+
+                                        <img src="assets/images/client/06.jpg" class="size-14 rounded-full shadow-md dark:shadow-gray-700 mx-auto" alt="">
+                                        <h6 class="mt-2 fw-semibold">Christa Smith</h6>
+                                        <span class="text-slate-400 text-sm">Manager</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--end grid-->
+            </div><!--end container-->
+
+            <div class="container relative lg:mt-24 mt-16">
+                <div class="grid grid-cols-1 text-center">
+                    <h3 class="mb-6 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">Have Question ? Get in touch!</h3>
+
+                    <p class="text-slate-400 max-w-xl mx-auto">A great plateform to buy, sell and rent your properties without any agent or commisions.</p>
+                
+                    <div class="mt-6">
+                        <a href="contact.html" class="btn bg-green-600 hover:bg-green-700 text-white rounded-md"><i class="uil uil-phone align-middle me-2"></i> Contact us</a>
+                    </div>
+                </div><!--end grid-->
+            </div><!--end container-->
+        </section><!--end section-->
+        <!-- End -->
+
+        @@include("partials/footer/footer.html")
+        @@include("partials/switcher.html")
+
+        <!-- Back to top -->
+        <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top fixed hidden text-lg rounded-full z-10 bottom-5 end-5 size-9 text-center bg-green-600 text-white justify-center items-center"><i class="uil uil-arrow-up"></i></a>
+        <!-- Back to top -->
+
+        <!-- JAVASCRIPTS -->
+        <script src="assets/libs/tiny-slider/min/tiny-slider.js"></script>
+        <script src="assets/libs/tobii/js/tobii.min.js"></script>
+        @@include("partials/script-files.html")
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>
