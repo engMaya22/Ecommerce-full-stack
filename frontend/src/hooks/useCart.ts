@@ -9,12 +9,12 @@ import {
 import { resetOrderStatus } from "@store/orders/ordersSlice";
 
 const useCart = () => {
+ 
   const dispatch = useAppDispatch();
 
   const { items, productsFullInfo, loading, error } = useAppSelector(
     (state) => state.cart
   );
-
   const userAccessToken = useAppSelector((state) => state.auth.accessToken);
 
   const placeOrderStatus = useAppSelector((state) => state.orders.loading);

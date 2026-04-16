@@ -20,4 +20,9 @@ npx prisma generate after each migrate
 
 to do 
 jwt 
+user profile work
 dashboard
+PAYMENT LIEK HOTEL GO PROJECT
+email for welcome loke hotel project
+depolyment
+github descrption based on package json
