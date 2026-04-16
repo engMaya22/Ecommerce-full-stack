@@ -9,10 +9,10 @@ const prisma = new PrismaClient();
 // GET /products?categoryId=1
 export const getProductsByCategory = async (req, res) => {
   try {
-    const {categoryId} = req.body;
+    const {id} = req.query;//get params of front url
      const products = await prisma.product.findMany({
       where: {
-        categoryId: Number(categoryId),
+        categoryId: Number(id),
       },
     });
 

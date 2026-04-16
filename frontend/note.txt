@@ -17,3 +17,7 @@ Redux Persist =
 npx prisma migrate dev --name init
 npx prisma migrate dev --name remove-category
 npx prisma generate after each migrate 
+
+to do 
+jwt 
+dashboard

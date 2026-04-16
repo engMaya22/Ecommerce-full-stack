@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 const { category, categoryImg, categoryTitle } = styles;
 
-const Category = ({ title, img, prefix }: TCategory) => {
+const Category = ({ title, img, prefix , id }: TCategory) => {
   return (
     <div className={category}>
-      <Link to={`/categories/products/${prefix}`}>
+      <Link to={`/products/${id}/${prefix}`}>
         <div className={categoryImg}>
           <img src={img} alt={title} />
         </div>

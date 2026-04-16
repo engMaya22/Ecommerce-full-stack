@@ -2,13 +2,13 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "@store/hooks";
 import {
-  actGetProductsByCatPrefix,
+  actGetProductsByCategory,
   cleanUpProductsRecords,
 } from "@store/products/productsSlice";
 
 const useProducts = () => {
   const params = useParams();
-  const productPrefix = params.prefix;
+  const productPrefix = params.prefix;//need to get prefix of category
   const dispatch = useAppDispatch();
   const { loading, error, records } = useAppSelector((state) => state.products);
   const cartItems = useAppSelector((state) => state.cart.items);
@@ -17,7 +17,8 @@ const useProducts = () => {
 
   useEffect(() => {
     const promise = dispatch(
-      actGetProductsByCatPrefix(params.prefix as string)
+   
+      actGetProductsByCategory(params.id as string)
     );
 
     return () => {
