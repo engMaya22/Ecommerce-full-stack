@@ -4,10 +4,11 @@ export const authMiddleware = (req, res, next) => {
   const authHeader = req.headers.authorization;
 
   if (!authHeader) {
-    return res.status(401).json({ message: "No token" });
+    return res.status(401).json({ message: "No token" });//we need to redirect him to login route!
   }
 
   const token = authHeader.split(" ")[1];
+
 
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);

@@ -23,7 +23,6 @@ export const login = async (req, res) => {
     }
 
     const token = generateToken(user);
-    // localStorage.setItem("accessToken", accessToken);
 
     res.json({
       user: {

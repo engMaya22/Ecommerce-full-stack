@@ -5,15 +5,27 @@ const axiosInstance = axios.create({
   baseURL: import.meta.env.VITE_BACKEND_URL,
 });
 // attach token automatically
-// axiosInstance.interceptors.request.use((config) => {
-//      const token = localStorage.getItem("accessToken");
-  
+axiosInstance.interceptors.request.use((config) => {
+  const token = localStorage.getItem("token");
 
-//   if (token) {
-//     config.headers.Authorization = `Bearer ${token}`;
-//   }
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
 
-//   return config;
-// });
+  return config;
+});
+axiosInstance.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.response?.status === 401) {
+      // remove invalid token
+      localStorage.removeItem("token");
 
+      // redirect to login
+      window.location.href = "/login";
+    }
+
+    return Promise.reject(error);
+  }
+);
 export default axiosInstance;

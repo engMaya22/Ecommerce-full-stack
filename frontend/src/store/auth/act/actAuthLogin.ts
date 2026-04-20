@@ -24,6 +24,8 @@ const actAuthLogin = createAsyncThunk(
 
     try {
       const res = await axiosInstance.post<TResponse>("/login", formData);
+      localStorage.setItem("token", res.data.accessToken);
+      console.log('data is ' ,res.data.accessToken);
       return res.data;
     } catch (error) {
       return rejectWithValue(axiosErrorHandler(error));
