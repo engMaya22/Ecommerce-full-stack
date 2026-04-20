@@ -1,3 +1,6 @@
+// Selectors
+// Read + compute data
+
 import { createSelector } from "@reduxjs/toolkit";
 import { RootState } from "@store";
 

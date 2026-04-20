@@ -1,7 +1,7 @@
 import { useEffect, useState, memo } from "react";
 import { useAppDispatch } from "@store/hooks";
 import { actLikeToggle } from "@store/wishlist/wishlistSlice";
-import { addToCart } from "@store/cart/cartSlice";
+import { actAddToCart } from "@store/cart/cartSlice";
 import Like from "@assets/svg/like.svg?react";
 import LikeFill from "@assets/svg/like-fill.svg?react";
 import ProductInfo from "../ProductInfo/ProductInfo";
@@ -46,7 +46,9 @@ const Product = memo(
     }, [isBtnDisabled]);
 
     const addToCartHandler = () => {
-      dispatch(addToCart(id));
+        //  dispatch(clearCartAfterPlaceOrder())
+
+      dispatch(actAddToCart({productId:id , quantity:1}));
       setIsBtnDisabled(true);
     };
 

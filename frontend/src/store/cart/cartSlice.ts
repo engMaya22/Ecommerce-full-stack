@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import actGetProductsByItems from "./act/actGetProductsByItems";
 import { getCartTotalQuantitySelector } from "./selectors";
 import { TProduct, TLoading, isString } from "@types";
+import actAddToCart from "./act/actAddToCart";
 
 interface ICartState {
   items: { [key: string]: number };
@@ -21,21 +22,21 @@ const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    addToCart: (state, action) => {
-      const id = action.payload;
-      if (state.items[id]) {
-        state.items[id]++;
-      } else {
-        state.items[id] = 1;
-      }
-    },
+    // addToCart: (state, action) => {
+    //   const id = action.payload;
+    //   if (state.items[id]) {
+    //     state.items[id]++;
+    //   } else {
+    //     state.items[id] = 1;
+    //   }
+    // },
     cartItemChangeQuantity: (state, action) => {
       state.items[action.payload.id] = action.payload.quantity;
     },
     cartItemRemove: (state, action) => {
       delete state.items[action.payload];
       state.productsFullInfo = state.productsFullInfo.filter(
-        (el) => el.id !== action.payload
+        (el) => el.id !== action.payload,
       );
     },
     cleanCartProductsFullInfo: (state) => {
@@ -61,13 +62,35 @@ const cartSlice = createSlice({
         state.error = action.payload;
       }
     });
+
+    builder.addCase(actAddToCart.pending, (state) => {
+      state.loading = "pending";
+
+      state.error = null;
+    });
+    builder.addCase(actAddToCart.fulfilled, (state, action) => {
+      const { productId, quantity } = action.meta.arg;
+
+      if (state.items[productId]) {
+        state.items[productId] += quantity;
+      } else {
+        state.items[productId] = quantity;
+      }
+
+      state.loading = "succeeded";
+    });
+    builder.addCase(actAddToCart.rejected, (state, action) => {
+      state.loading = "failed";
+      if (isString(action.payload)) {
+        state.error = action.payload;
+      }
+    });
   },
 });
 
-export { getCartTotalQuantitySelector, actGetProductsByItems };
+export { getCartTotalQuantitySelector, actGetProductsByItems, actAddToCart };
 
 export const {
-  addToCart,
   cartItemChangeQuantity,
   cartItemRemove,
   cleanCartProductsFullInfo,

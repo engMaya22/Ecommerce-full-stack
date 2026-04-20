@@ -3,9 +3,12 @@ import { Category } from "@components/eCommerce";
 import { GridList, Heading } from "@components/common";
 import { Loading } from "@components/feedback";
 import { TCategory } from "@types";
+import { useEffect } from "react";
+
 
 const Categories = () => {
   const { loading, error, records } = useCategories();
+ 
 
   return (
     <>
