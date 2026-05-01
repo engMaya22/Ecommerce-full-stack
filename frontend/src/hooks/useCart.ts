@@ -12,9 +12,12 @@ const useCart = () => {
  
   const dispatch = useAppDispatch();
 
+
   const { items, productsFullInfo, loading, error } = useAppSelector(
     (state) => state.cart
   );
+   
+
   const userAccessToken = useAppSelector((state) => state.auth.accessToken);
 
   const placeOrderStatus = useAppSelector((state) => state.orders.loading);
@@ -33,10 +36,11 @@ const useCart = () => {
     [dispatch]
   );
 
-  const products = productsFullInfo.map((el) => ({
-    ...el,
-    quantity: items[el.id],
-  }));
+  // const products = productsFullInfo.map((el) => ({
+  //   ...el,
+  //   quantity: items[el.id],
+  // }));
+  const products = productsFullInfo; // already has quantity
 
   useEffect(() => {
     const promise = dispatch(actGetProductsByItems());

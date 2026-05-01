@@ -10,29 +10,31 @@ const actGetProductsByItems = createAsyncThunk(
   "cart/actGetProductsByItems",
   async (_, thunkAPI) => {
     const { rejectWithValue, fulfillWithValue, getState, signal } = thunkAPI;
-    const { cart } = getState() as RootState;
-    const itemsId = Object.keys(cart.items);
+    // const { cart } = getState() as RootState;
+    // const itemsId = Object.keys(cart.items);
 
-    if (!itemsId.length) {
-      return fulfillWithValue([]);
-    }
+    // if (!itemsId.length) {
+    //   return fulfillWithValue([]);
+    // }
 
     try {
-    //  const concatenatedItemsId = itemsId.map((el) => `id=${el}`).join("&");
+      //  const concatenatedItemsId = itemsId.map((el) => `id=${el}`).join("&");
       // const response = await axios.get<TResponse>(
       //   `/products?${concatenatedItemsId}`,
       //   { signal }
       // );
-      const response = await axiosInstance.get<TResponse>(
-        "/cart",
-        { signal }
-      );
-      return response.data;
+      const response = await axiosInstance.get<TResponse>("/cart", { signal });
+      const products = response.data?.items?.map((item: any) => ({
+        ...item.product,
+        quantity: item.quantity,
+      }));
+
+      return products || [];
     } catch (error) {
       console.log(error);
       return rejectWithValue(axiosErrorHandler(error));
     }
-  }
+  },
 );
 
 export default actGetProductsByItems;
