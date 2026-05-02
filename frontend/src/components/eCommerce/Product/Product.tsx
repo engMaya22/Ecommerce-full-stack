@@ -1,7 +1,7 @@
 import { useEffect, useState, memo } from "react";
 import { useAppDispatch } from "@store/hooks";
 import { actLikeToggle } from "@store/wishlist/wishlistSlice";
-import { actAddToCart } from "@store/cart/cartSlice";
+import { actAddToCart, actGetProductsByItems } from "@store/cart/cartSlice";
 import Like from "@assets/svg/like.svg?react";
 import LikeFill from "@assets/svg/like-fill.svg?react";
 import ProductInfo from "../ProductInfo/ProductInfo";

@@ -3,16 +3,21 @@ import actGetProductsByItems from "./act/actGetProductsByItems";
 import { getCartTotalQuantitySelector } from "./selectors";
 import { TProduct, TLoading, isString } from "@types";
 import actAddToCart from "./act/actAddToCart";
+import actRemoveFromCart from "./act/actRemoveFromCart";
 
+// interface ICartState {
+//   items: { [key: string]: number };
+//   productsFullInfo: TProduct[];
+//   loading: TLoading;
+//   error: null | string;
+// }
 interface ICartState {
-  items: { [key: string]: number };
   productsFullInfo: TProduct[];
   loading: TLoading;
   error: null | string;
 }
-
 const initialState: ICartState = {
-  items: {},
+  // items: {},
   productsFullInfo: [],
   loading: "idle",
   error: null,
@@ -30,23 +35,24 @@ const cartSlice = createSlice({
     //     state.items[id] = 1;
     //   }
     // },
-    cartItemChangeQuantity: (state, action) => {
-      state.items[action.payload.id] = action.payload.quantity;
-    },
-    cartItemRemove: (state, action) => {
-      delete state.items[action.payload];
-      state.productsFullInfo = state.productsFullInfo.filter(
-        (el) => el.id !== action.payload,
-      );
-    },
+    // cartItemChangeQuantity: (state, action) => {
+    //   state.items[action.payload.id] = action.payload.quantity;
+    // },
+    // cartItemRemove: (state, action) => {
+    //   delete state.items[action.payload];
+    //   state.productsFullInfo = state.productsFullInfo.filter(
+    //     (el) => el.id !== action.payload,
+    //   );
+    // },
     cleanCartProductsFullInfo: (state) => {
       state.productsFullInfo = [];
     },
     clearCartAfterPlaceOrder: (state) => {
-      state.items = {};
+      // state.items = {};
       state.productsFullInfo = [];
     },
   },
+
   extraReducers: (builder) => {
     builder.addCase(actGetProductsByItems.pending, (state) => {
       state.loading = "pending";
@@ -71,10 +77,15 @@ const cartSlice = createSlice({
     builder.addCase(actAddToCart.fulfilled, (state, action) => {
       const { productId, quantity } = action.meta.arg;
 
-      if (state.items[productId]) {
-        state.items[productId] += quantity;
-      } else {
-        state.items[productId] = quantity;
+      // if (state.items[productId]) {
+      //   state.items[productId] += quantity;
+      // } else {
+      //   state.items[productId] = quantity;
+      // }
+      const product = state.productsFullInfo.find((p) => p.id === productId);
+
+      if (product) {
+        product.quantity += quantity;
       }
 
       state.loading = "succeeded";
@@ -85,14 +96,27 @@ const cartSlice = createSlice({
         state.error = action.payload;
       }
     });
+
+    builder.addCase(actRemoveFromCart.fulfilled, (state, action) => {
+      const productId = action.payload;
+
+      state.productsFullInfo = state.productsFullInfo.filter(
+        (el) => el.id !== productId,
+      );
+    });
   },
 });
 
-export { getCartTotalQuantitySelector, actGetProductsByItems, actAddToCart };
+export {
+  getCartTotalQuantitySelector,
+  actGetProductsByItems,
+  actAddToCart,
+  actRemoveFromCart,
+};
 
 export const {
-  cartItemChangeQuantity,
-  cartItemRemove,
+  //  cartItemChangeQuantity,
+  // cartItemRemove,
   cleanCartProductsFullInfo,
   clearCartAfterPlaceOrder,
 } = cartSlice.actions;

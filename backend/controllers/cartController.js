@@ -80,3 +80,35 @@ export const addToCart = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
+
+
+// Remove item from cart
+export const removeFromCart = async (req, res) => {
+  try {
+    const userId = req.user.userId;
+    const productId = Number(req.params.productId);
+
+    const cart = await prisma.cart.findUnique({
+      where: { userId },
+    });
+
+    if (!cart) {
+      return res.status(404).json({ message: "Cart not found" });
+    }
+
+    await prisma.cartItem.delete({
+      where: {
+        cartId_productId: {
+          cartId: cart.id,
+          productId,
+        },
+      },
+    });
+
+    res.json({ message: "Item removed" });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: error.message });
+  }
+};

@@ -6,6 +6,7 @@ import { NavLink } from "react-router-dom";
 import { Badge, Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import HeaderLeftBar from "./HeaderLeftBar/HeaderLeftBar";
 import styles from "./styles.module.css";
+import { actGetProductsByItems } from "@store/cart/cartSlice";
 
 const { headerContainer, headerLogo } = styles;
 
@@ -17,6 +18,7 @@ const Header = () => {
   useEffect(() => {
     if (accessToken) {
       dispatch(actGetWishlist("ProductIds"));
+      dispatch(actGetProductsByItems());
     }
   }, [dispatch, accessToken]);
 

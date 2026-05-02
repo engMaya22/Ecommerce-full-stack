@@ -1,9 +1,9 @@
 import { useCallback, useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "@store/hooks";
 import {
+  actAddToCart,
   actGetProductsByItems,
-  cartItemChangeQuantity,
-  cartItemRemove,
+  actRemoveFromCart,
   cleanCartProductsFullInfo,
 } from "@store/cart/cartSlice";
 import { resetOrderStatus } from "@store/orders/ordersSlice";
@@ -24,18 +24,26 @@ const useCart = () => {
 
   const changeQuantityHandler = useCallback(
     (id: number, quantity: number) => {
-      dispatch(cartItemChangeQuantity({ id, quantity }));
+       dispatch(actAddToCart({ productId: id, quantity }));
+      dispatch(actGetProductsByItems());//refresh state
     },
     [dispatch]
   );
 
-  const removeItemHandler = useCallback(
-    (id: number) => {
-      dispatch(cartItemRemove(id));
-    },
-    [dispatch]
-  );
-
+  // const removeItemHandler = useCallback(
+  //   (id: number) => {
+  //     dispatch(cartItemRemove(id));
+  //   },
+  //   [dispatch]
+  // );
+const removeItemHandler = useCallback(
+  async (id: number) => {
+    await dispatch(actRemoveFromCart(id));
+    // optional safety:
+    // dispatch(actGetProductsByItems());
+  },
+  [dispatch]
+);
   // const products = productsFullInfo.map((el) => ({
   //   ...el,
   //   quantity: items[el.id],
